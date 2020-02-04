@@ -433,3 +433,82 @@ const customers = [
     'nat': 'US'
   }
 ]
+
+
+function createCustomerProfile(customers) {
+  const listItem = document.createElement('li')
+  const figure = document.createElement('figure')
+  const img = document.createElement('img')
+  img.src = customers.picture.medium
+  img.classList.add('centered')
+
+  const caption = document.createElement('p')
+  caption.textContent = [customers.name.first + " " + customers.name.last]
+  caption.classList.add('lineOne')
+
+  const captionTwo = document.createElement('p')
+  captionTwo.textContent = [customers.location.street]
+  captionTwo.classList.add('lineTwo')
+  
+  const captionTwoPointFive = document.createElement('p')
+  captionTwoPointFive.textContent = [customers.location.city + ", " + nameToAbbr(customers.location.state) + " " + customers.location.postcode]
+  captionTwoPointFive.classList.add('lineTwo')
+  //This one looks stupid but I added it after the fact.
+  
+  const captionThree = document.createElement('p')
+  captionThree.textContent = ["Home: " + customers.phone, " | " + "Cell: " + customers.cell]
+  captionThree.classList.add('lineThree')
+  
+  const captionFour = document.createElement('p')
+  captionFour.textContent = ["DoB: " + moment(customers.dob).format("MMM D, YYYY")]
+  captionFour.classList.add('lineFour')
+ 
+  const captionFive = document.createElement('p')
+  captionFive.textContent = ["Member since: " + moment(customers.registered).format("MMM D, YYYY")]
+  captionFive.classList.add('lineFive')
+
+  figure.appendChild(img)
+  figure.appendChild(caption)
+  figure.appendChild(captionTwo)
+  figure.appendChild(captionTwoPointFive)
+  figure.appendChild(captionThree)
+  figure.appendChild(captionFour)
+  figure.appendChild(captionFive)
+  listItem.appendChild(figure)
+  // listItem.classList.add("customer-profile")
+
+  return listItem;
+}
+
+function showCustomerProfiles(){
+  const list = document.querySelector("#customer-profile")
+  for (const customer of customers){
+      const listItem = createCustomerProfile(customer)
+      list.appendChild(listItem)
+  }
+}
+
+showCustomerProfiles()
+
+// const caption = document.createElement('figcaption')
+//   caption.textContent = [customers.name.first,  //Question here on how to link to another file.
+//   " " + customers.name.last,
+//   " " + customers.location.street,
+//   " " + customers.location.city,
+//   " " + customers.location.state,
+//   " " + customers.location.postcode,
+//   " " + customers.phone,
+//   " " + customers.cell,
+//   " " + customers.dob,
+//   " " + customers.registered]
+
+//"dddd, MMMM Do YYYY"
+
+//Create div for all of it
+//Do P's or inner HTML's instead of figcaption
+
+// //About to break this:
+// const captionTwo = document.createElement('p')
+// captionTwo.textContent = [customers.location.street,
+// " " + customers.location.city + " " + customers.location.state, " " + customers.location.postcode]
+// captionTwo.classList.add('lineTwo')

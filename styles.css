@@ -1,0 +1,89 @@
+* {
+    Box-sizing: border-box;
+    Margin: 0;
+    Padding: 0;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    }
+
+h1 {
+    margin: 60px;
+}
+
+li {
+    list-style-type: none;
+    text-transform: capitalize;
+    margin: 5px;
+    width: 22.5%;
+    display: inline-block;
+    border: ridge 3px blue;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.lineFive {
+    text-transform: none;
+    margin-bottom: 5px;
+}
+
+li:hover {
+    box-shadow: 5px 5px 5px grey;
+}
+
+img {
+    border-radius: 50px; 
+    margin-top: 5px;
+}
+
+.customers{
+    margin-left: 5%;
+    /* margin-right: 5%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+figure {
+    /* width: 22.5%; */
+    display: inline-block;
+    /* justify-content: space-evenly; */
+    
+}
+
+figcaption {
+    display: inline-block;
+    clear: both;
+}
+
+.lineOne {
+    font-size: 1rem;
+}
+
+.lineTwo, .lineThree, .lineFour, .lineFive {
+    font-size: .5rem;
+    color: rgb(60	64	67	);
+}
+
+p {
+    margin: 2px;
+    text-align: center;
+}
+
+.centered{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* text transform capitalize
+text transform uppercase */
+
+/* .customer-profile{
+    width: 25%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+} */
