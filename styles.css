@@ -66,6 +66,7 @@ figcaption {
 
 .lineTwo {
     color: rgb(167	155	142	);
+    text-transform: none;
 }
 
 p {

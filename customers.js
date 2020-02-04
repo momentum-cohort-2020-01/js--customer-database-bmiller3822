@@ -439,7 +439,7 @@ function createCustomerProfile(customers) {
   const listItem = document.createElement('li')
   const figure = document.createElement('figure')
   const img = document.createElement('img')
-  img.src = customers.picture.medium
+  img.src = customers.picture.large
   img.classList.add('centered')
 
   const caption = document.createElement('p')
