@@ -446,13 +446,18 @@ function createCustomerProfile(customers) {
   caption.textContent = [customers.name.first + " " + customers.name.last]
   caption.classList.add('lineOne')
 
+  const captionSix = document.createElement('p')
+  captionSix.textContent = [customers.email]
+  captionSix.classList.add('lineTwo')
+  //This one is out of order too :P 
+
   const captionTwo = document.createElement('p')
   captionTwo.textContent = [customers.location.street]
-  captionTwo.classList.add('lineTwo')
+  captionTwo.classList.add('lineThree')
   
   const captionTwoPointFive = document.createElement('p')
   captionTwoPointFive.textContent = [customers.location.city + ", " + nameToAbbr(customers.location.state) + " " + customers.location.postcode]
-  captionTwoPointFive.classList.add('lineTwo')
+  captionTwoPointFive.classList.add('lineThree')
   //This one looks stupid but I added it after the fact.
   
   const captionThree = document.createElement('p')
@@ -469,6 +474,7 @@ function createCustomerProfile(customers) {
 
   figure.appendChild(img)
   figure.appendChild(caption)
+  figure.appendChild(captionSix)
   figure.appendChild(captionTwo)
   figure.appendChild(captionTwoPointFive)
   figure.appendChild(captionThree)
