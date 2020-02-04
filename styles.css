@@ -7,6 +7,7 @@
 
 h1 {
     margin: 70px;
+    color: blue;
 }
 
 li {
@@ -30,13 +31,12 @@ li:hover {
 }
 
 img {
-    border-radius: 50px 80px 50px 80px; 
+    border-radius: 50px 80px; 
     margin-top: 5px;
 }
 
 .customers{
     margin-left: 5%;
-    /* margin-right: 5%; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -44,10 +44,7 @@ img {
 }
 
 figure {
-    /* width: 22.5%; */
-    display: inline-block;
-    /* justify-content: space-evenly; */
-    
+    display: inline-block;    
 }
 
 figcaption {
@@ -80,15 +77,3 @@ p {
   margin-right: auto;
   width: 50%;
 }
-
-/* text transform capitalize
-text transform uppercase */
-
-/* .customer-profile{
-    width: 25%;
-    height: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-} */
